@@ -1,0 +1,1004 @@
+/* INFO3130-Section1-Midterm
+ * This assignment is for Midterm Time Bank
+ * 
+ * Revision History
+ *      Alisha Huang, 2021,10,20: Created
+ */
+
+/*
+Font download from <a href="https://freefontsfamily.com/segoe-ui-font-free/">free fonts family</a>is licensed by CC BY 3.0
+Free for Personal Use
+*/
+@font-face {font-family: Segoe UI; 
+    src: local("Segoe UI"); 
+    src: url(./fonts/SEGOEUI.TTF);
+}
+
+
+body{
+    margin:0;
+    padding: 0;
+    font-family: "Segoe UI", Helvetica, sans-serif;
+}
+
+.wrap{
+    background-color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 120px 350px 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+}
+
+/*general items*/
+
+h2{
+    font-size: 1.5rem;
+}
+
+.dotted_line{
+    border-bottom: 4px dotted #707070;
+    margin: 0 20px;
+}
+
+.greenBtn{
+    background-color: #596A5D;
+    color: white;
+    text-align: right;
+    font-size: .9rem;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.blueGreenBtn{
+    background-color: #016A83;
+    color: white;
+    text-align: right;
+    font-size: .9rem;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.redBtn{
+    background-color: #DC1919;
+    color: white;
+    text-align: right;
+    font-size: .9rem;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.mainButton{
+    color: white;
+    background-color: #005086;
+    border: none;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+    border: 3px solid white;
+}
+
+
+
+/*Header*/
+.header{
+    background-color: white;
+    grid-column: 1/7;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: min-content;
+}
+
+.header .logo{
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.header .nav{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .nav a{
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 0 8px;;
+}
+
+.header .navItem1, .navItem3{
+    padding-top: 15px;
+}
+
+
+.header .navItem2{
+    padding-top: 8px;
+}
+
+
+/*Balance statement*/
+.earned{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    background-image: url("images/balance/earned.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.earned h3{
+    color: #005086;
+    font-size: 2.1em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.balance{
+    grid-column: 3/5;
+    grid-row: 2/3;
+    background-image: url("images/balance/balance.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.balance h3{
+    color: #001244;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    margin-right: 18px;
+}
+
+.spent{
+    grid-column: 5/7;
+    grid-row: 2/3;
+    background-image: url("images/balance/spent.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.spent h3{
+    color: #005086;
+    font-size: 2.1em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/*Trades*/
+.latesTrades{
+    background-color: #E2E7E3;
+    grid-column: 1/4;
+    grid-row: 3/4;
+    margin: 1em;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.latesTrades table{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.trade td{
+    color: #18271C;
+    font-size: 1.2rem;
+    text-align: left;
+    padding-right: 30px;
+    padding-top: 20px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+
+/*upcoming appointments*/
+.upcoming_appointments{
+    background-color: #D5E0E2;
+    grid-column: 4/7;
+    grid-row: 3/4;
+    margin: 1em;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.appointment{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+.appointment td{
+    color: #18271C;
+    font-size: 1.2rem;
+    text-align: left;
+    padding-right: 20px;
+    padding-top: 30px;
+    font-weight: 600;
+}
+
+.appointment button{
+    margin-top: 10px;
+}
+
+.appointment td p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 1rem;
+}
+
+.appointment td h4{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+/*search*/
+.search{
+    background-image: url("./images/help_img1.png");
+    grid-column: 1/7;
+    grid-row: 4/5;
+    margin: 1em;
+    text-align: center;
+}
+
+.searchBar{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.searchBar input{
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    border-radius: 45px;
+    background: white;
+    font-size: 1rem;
+    color: #001244;
+    outline: none;
+    background-image: url("./images/search.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.searchBtns{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.searchBtns button{
+    border: none;
+    outline: none;
+    margin: 0 20px;
+    width: 240px;
+    height: 240px;
+    border-radius: 17px;
+}
+
+.searchBtns h4{
+    font-size: 1.2rem;
+    color: #001244;
+}
+
+.searchBtns p{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #18271C;
+}
+
+.requestBtn{
+    background-color: #FFCA8C;
+    opacity: 90%;
+}
+
+.unleashBtn{
+    background-color: #F6CDC7;
+    opacity: 90%;
+}
+
+.beHeroBtn{
+    background-color: #C7C19D;
+    opacity: 90%;
+}
+
+.requestBtn:hover,
+.unleashBtn:hover,
+.beHeroBtn:hover{
+    background-color: white;
+    opacity: 85%;
+}
+
+.searchBarForMobile, .divForUnleashBtn, .divForBHeroBtn{
+    display: none;
+    visibility: hidden;
+}
+
+/*Category*/
+.category{
+    background-color: white;
+    grid-column: 1/7;
+    grid-row: 5/6;
+    margin: 1em;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.cate_list figure{
+    display: inline-block;
+}
+
+.cate_list img:hover{
+    opacity: 70%;
+}
+
+.cate_list figcaption{
+    font-weight: bold;
+}
+
+.category h3{
+    text-align: left;
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+
+.category .mainButton{
+    display: none;
+    visibility: hidden;
+}
+
+/* footer */
+.footer{
+    background-color: #F7D6BF;
+    grid-column: 1/7;
+    grid-row: 6/7;
+    display: flex;
+    height: 100px;
+}
+
+.footer .logo{
+    margin: auto;
+    padding-left: 100px;
+    width: 199px;
+    height: 37px;
+}
+
+.footer p{
+    font-size: 1.2rem;
+    padding: 20px;
+    font-weight: bold;
+    color:#18271C;
+}
+
+.footer .nav{
+    visibility: hidden;
+    display: none;
+}
+
+
+
+/*code for responsive screen*/
+@media screen and (max-width: 1050px) {
+    .wrap{
+        grid-template-rows: 120px 300px 1fr 1fr 1fr 1fr;;
+    }
+    .balance{
+        background-image: url("images/balance/balance-400.png");
+    }
+    
+    .earned{
+        background-image: url("images/balance/earned-400.png");
+    }
+    
+    .spent{
+        background-image: url("images/balance/spent-400.png");
+    }
+    .balance h3{
+        margin-top: 90px;
+        margin-right: 8px;
+    }
+    .earned h3{
+        margin-top: 125px;
+        margin-right: 5px;
+    }
+    .spent h3{
+        margin-top: 125px;
+        margin-right: 5px;
+    }
+
+    .trade td{
+        font-size: 1.1rem;
+    }
+    .trade button{
+        font-size: .85rem;
+    }
+    .latesTrades .mainButton{
+        margin-top: 30px;
+    }
+
+    .appointment td{
+        padding-right: 0px;
+    }
+    
+    .appointment button{
+        margin-right: 10px;
+    }
+
+    .upcoming_appointments .mainButton{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wrap{
+        grid-template-rows: 110px 250px 1fr 1fr 1fr 1fr;;
+    }
+
+    .header .nav a{
+        padding: 15px 10px;
+    }
+    
+    .header .navItem1{
+        width: 90px;
+        height: 50px;
+        padding-top: 18px;
+    }
+
+    .header .navItem2{
+        width: 90px;
+        height: 50px;
+        padding-top: 16px;
+    }
+
+    .header .navItem3{
+        width: 70px;
+        height: 45px;
+        padding-top: 22px;
+    }
+
+    .header .navItem4{
+        width: 45px;
+        height: 60px;
+        padding-top: 8px;
+    }
+
+    .balance h3{
+        margin-top: 70px;
+        margin-right: 5px;
+        font-size: 2.1em;
+    }
+    .earned h3{
+        margin-top: 100px;
+        margin-right: 5px;
+        font-size: 1.8em;
+    }
+    .spent h3{
+        margin-top: 100px;
+        margin-right: 5px;
+        font-size: 1.8em;
+    }
+
+    .searchBtns button{
+        width: 200px;
+        height: 200px;
+    }
+    .cate_list figure img{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrap{
+        grid-template-rows: 110px 200px 1fr 1fr 1fr 1fr 1fr;
+    }
+    .logo{
+        width: 160px;
+        height: 30px;
+    }
+
+    .balance h3{
+        margin-top: 50px;
+        margin-right: 2px;
+        font-size: 2em;
+    }
+    .earned h3{
+        margin-top: 80px;
+        margin-right: 5px;
+        font-size: 1.6em;
+    }
+    .spent h3{
+        margin-top: 80px;
+        margin-right: 5px;
+        font-size: 1.6em;
+    }
+
+    .latesTrades{
+        grid-row: 3/4;
+        grid-column: 1/7;
+    }
+    .latesTrades table{
+        margin-bottom: 10px;
+    }
+    .trade td{
+        padding-bottom: 10px;
+    }
+
+    .upcoming_appointments{
+        grid-row: 4/5;
+        grid-column: 1/7;
+    }
+
+    .appointment td{
+        padding-right: 30px;
+    }
+    .search{
+        grid-column: 1/7;
+        grid-row: 5/6; 
+    }
+    .searchBtns button{
+        width: 160px;
+        height: 160px;
+    }
+    .searchBar input{
+        margin-right: 60px;
+    }
+
+    .category{
+        grid-column: 1/7;
+        grid-row: 6/7; 
+    }
+    
+
+    .footer{
+        grid-column: 1/7;
+        grid-row: 7/8; 
+    }
+    .footer .logo{
+        width: 150px;
+        height: 30px;
+    }
+    .footer p{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .wrap{
+        grid-template-rows: 1fr 150px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .header{
+        height: min-content;
+        text-align: center;
+        display: block;
+    }
+
+    .header .logo{
+        margin: 15px 15px;
+        
+    }
+
+    .header .nav{
+        visibility: hidden;
+        display: none;
+    }
+
+    .balance h3{
+        margin-top: 35px;
+        margin-right: 2px;
+        font-size: 1.5em;
+    }
+    .earned h3{
+        margin-top: 60px;
+        margin-right: 5px;
+        font-size: 1.1em;
+    }
+    .spent h3{
+        margin-top: 60px;
+        margin-right: 5px;
+        font-size: 1.1em;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+    .dotted_line{
+        border-bottom: 2px dotted #707070;
+    }
+    .greenBtn, .blueGreenBtn, .redBtn{
+        font-size: .75rem;
+    }
+
+    .mainButton{
+        font-size: .95rem;
+    }
+    .latesTrades .mainButton{
+        margin-top: 15px;
+    }
+    .trade td{
+        font-size: 1rem;
+        padding-top: 10px;
+    }
+
+    .appointment td{
+        padding-top: 15px;
+        padding-right: 5px;
+        padding-left: 20px;
+    }
+
+    .appointment td p{
+        font-size: .8rem;
+    }
+    
+    .appointment td h4{
+        font-size: 1rem;
+    }
+
+    .search{
+        display: none;
+        visibility: hidden;
+    }
+
+    .searchBarForMobile{
+        background-image: url("./images/help_img1_s.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-column: 1/7;
+        grid-row: 5/6;
+        display: block;
+        visibility: visible;
+        margin: 1em;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .searchBarForMobile input{
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+        border: none;
+        border-radius: 45px;
+        background: white;
+        font-size: 1rem;
+        color: #001244;
+        outline: none;
+        background-image: url("./images/search.png");
+        background-position: right center;
+        background-repeat: no-repeat;
+        margin-right: 65px;
+        margin-bottom: 20px;
+    }
+
+    .searchBarForMobile button, .divForUnleashBtn button, 
+    .divForBHeroBtn button{
+        border: none;
+        outline: none;
+        margin: 20 20px;
+        width: 240px;
+        height: 240px;
+        border-radius: 17px;
+    }
+
+    .searchBarForMobile button h4,
+    .divForUnleashBtn button h4,
+    .divForBHeroBtn button h4{
+        font-size: 1.2rem;
+        color: #001244;
+    }
+    .searchBarForMobile button p,
+    .divForUnleashBtn button p,
+    .divForBHeroBtn button p{
+        font-size: 1rem;
+        font-weight: 600;
+        color: #18271C;
+    }
+
+    .divForUnleashBtn{
+        background-image: url("./images/help_img2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-column: 1/7;
+        grid-row: 6/7;
+        display: block;
+        visibility: visible;
+        margin: 1em;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .divForBHeroBtn{
+        background-image: url("./images/help_img3.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-column: 1/7;
+        grid-row: 7/8;
+        display: block;
+        visibility: visible;
+        margin: 1em;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .searchBarForMobile button:hover, 
+    .divForUnleashBtn button:hover,
+    .divForBHeroBtn button:hover{
+        background-color: white;
+        opacity: 85%;
+    }
+
+    .category{
+        grid-column: 1/7;
+        grid-row: 8/9; 
+        padding-bottom: 100px;
+    }
+    .cate_list{
+        display: inline;
+    }
+    .cate_list figure img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .footer{
+        grid-column: 1/7;
+        grid-row: 9/10;
+        background-color: #E2E7E3;
+        position: fixed;
+        bottom: 0px ;
+        width: 100%;
+    }
+    .footer .logo{
+        display: none;
+        visibility: hidden;
+    }
+    .footer p{
+        display: none;
+        visibility: hidden;
+    }
+
+    .footer .nav{
+        display:flex;
+        visibility:visible;
+        list-style: none;
+        
+    }
+
+    .footer .nav a{
+        text-decoration: none;
+        padding: 6px;
+        margin: 0 2px;;
+        justify-content: space-evenly;
+    
+    }
+
+    .footer .navItem1{
+        width: 90px;
+        height: 50px;
+        padding-top: 18px;
+    }
+
+    .footer .navItem2{
+        width: 90px;
+        height: 50px;
+        padding-top: 16px;
+    }
+
+    .footer .navItem3{
+        width: 70px;
+        height: 45px;
+        padding-top: 20px;
+    }
+
+    .footer .navItem4{
+        width: 45px;
+        height: 60px;
+        padding-top: 5px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .wrap{
+        grid-template-rows: 1fr 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .balance h3{
+        margin-top: 20px;
+        margin-right: 2px;
+        font-size: 1.2em;
+    }
+    .earned h3{
+        margin-top: 40px;
+        margin-right: 5px;
+        font-size: 1em;
+    }
+    .spent h3{
+        margin-top: 40px;
+        margin-right: 5px;
+        font-size: 1em;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .mainButton{
+        font-size: .7rem;
+    }
+    .greenBtn, .blueGreenBtn, .redBtn{
+        font-size: .6rem;
+    }
+    .trade td{
+        font-size: .8rem;
+    }
+
+    .trade .greenBtn{
+        font-size: .6rem;
+    }
+
+    .searchBarForMobile button, .divForUnleashBtn button, 
+    .divForBHeroBtn button{
+        width: 200px;
+        height: 200px;
+    }
+
+    .searchBarForMobile button h4,
+    .divForUnleashBtn button h4,
+    .divForBHeroBtn button h4{
+        font-size: 1.2rem;
+        color: #001244;
+    }
+    .searchBarForMobile button p,
+    .divForUnleashBtn button p,
+    .divForBHeroBtn button p{
+        font-size: 1rem;
+        font-weight: 600;
+        color: #18271C;
+    }
+
+
+    .searchBarForMobile input{
+        margin-right: 55px;
+    }
+
+    .footer .navItem1{
+        width: 80px;
+        height: 45px;
+        padding-top: 18px;
+    }
+
+    .footer .navItem2{
+        width: 80px;
+        height: 45px;
+        padding-top: 16px;
+    }
+
+    .footer .navItem3{
+        width: 60px;
+        height: 40px;
+        padding-top: 20px;
+    }
+
+    .footer .navItem4{
+        width: 40px;
+        height: 52px;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    
+    .searchBarForMobile input{
+        margin-right: 45px;
+        font-size: .8rem;
+    }
+
+    .footer .navItem1{
+        width: 70px;
+        height: 40px;
+        padding-top: 18px;
+    }
+
+    .footer .navItem2{
+        width:70px;
+        height: 40px;
+        padding-top: 16px;
+    }
+
+    .footer .navItem3{
+        width: 58px;
+        height: 35px;
+        padding-top: 20px;
+    }
+
+    .footer .navItem4{
+        width: 30px;
+        height: 48px;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .wrap{
+        grid-template-rows: 1fr 80px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .balance h3{
+        margin-top: 20px;
+        margin-right: 2px;
+        font-size: 1em;
+    }
+    .earned h3{
+        margin-top: 30px;
+        margin-right: 5px;
+        font-size: .8em;
+    }
+    .spent h3{
+        margin-top: 30px;
+        margin-right: 5px;
+        font-size: .8em;
+    }
+
+    
+    .footer .navItem1{
+        width: 50px;
+        height: 30px;
+        padding-top: 18px;
+    }
+
+    .footer .navItem2{
+        width:50px;
+        height: 30px;
+        padding-top: 16px;
+    }
+
+    .footer .navItem3{
+        width: 40px;
+        height: 30px;
+        padding-top: 20px;
+    }
+
+    .footer .navItem4{
+        width: 30px;
+        height: 48px;
+        padding-top: 1px;
+    }
+
+}

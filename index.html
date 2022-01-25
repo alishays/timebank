@@ -1,0 +1,222 @@
+<!--INFO3130-Section1-Midterm
+ * This assignment is for Midterm Time Bank
+ * 
+ * Revision History
+ *      Alisha Huang, 2021,10,20: Created
+-->
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset-UTF-8">
+        <meta name="Viewport" content="width=device-width, initial-scale=1">
+        <title>Time Bank</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="header">
+                <img src="./images/logo.png" class="logo" alt="logo">
+                <ul class="nav">
+                    <li><a href="#"><img src="./images/nav/tramsaction.png" class="navItem1" alt="transaction icon"></a></li>
+                    <li><a href="#"><img src="./images/nav/notification.png" class="navItem2" alt="notification icon"></a></li>
+                    <li><a href="#"><img src="./images/nav/messages.png" class="navItem3" alt="messages icon"></a></li>
+                    <li><a href="#"><img src="./images/nav/profile.png" class="navItem4" alt="profile icon"></a></li>
+                </ul>
+            </div>
+
+            <div class="earned">
+                <h3>61.0<br>HRs</h3>
+            </div>
+            
+            <div class="balance">
+                <h3>45.5<br>HRs</h3>
+            </div>
+            
+            <div class="spent">
+                <h3>14.5<br>HRs</h3>
+            </div>
+            
+            <div class="latesTrades">
+                <h2>Latest Trades</h2>
+                <div class="dotted_line"></div>
+
+                <table class="trade">
+                    <tr>
+                      <td>2021.10.18 Guitar Lesson</td>
+                      <td>-3.0 HRs</td>
+                      <td><button class="greenBtn">Feedback</button></td>
+                    </tr>
+                    <tr>
+                      <td>2021.10.10 Asian Cooking</td>
+                      <td>+1.5 HRs</td>
+                      <td><button class="greenBtn">Feedback</button></td>
+                    </tr>
+                    <tr>
+                        <td>2021.10.09 Guitar Lesson</td>
+                        <td>-2.5 HRs</td>
+                        <td><button class="greenBtn">Feedback</button></td>
+                      </tr>
+                  </table>
+
+                <button class="mainButton">More</button>
+
+            </div>
+
+            <div class="upcoming_appointments">
+
+                <h2>Upcoming Appointments</h2>
+                <div class="dotted_line"></div>
+
+                <table class="appointment">
+                        <tr>
+                          <td>
+                              <p>2021.10.20 15:00 </p>
+                              <h4>Guitar Lesson with Judy</h3>
+                              <p>Pay -3.0 HRs</p>
+                        </td>
+                        <td>
+                            <button class="greenBtn">Message</button>
+                            <button class="blueGreenBtn">Complete</button>
+                            <button class="redBtn">Pay Time</button>
+                          </td>
+                          
+                        </tr>
+                        <tr>
+                          <td>
+                              <p>2021.10.22 11:00</p>
+                            <h4>Buy Grocery for Hana</h4>
+                            <p>Earn +2.0 HRs</p>
+                            <td>
+                                <button class="greenBtn">Message</button>
+                                <button class="blueGreenBtn">Complete</button>
+                                <button class="redBtn">Request Time</button>
+                              </td>
+
+                  </table>
+
+                <button class="mainButton">More</button>
+            </div>
+
+            <div class="search">
+                <div class="searchBar">
+                    <label style="visibility: hidden;" for="searchBar">Search Bar</label>
+                    <input type="text" id="searchBar" name="searchBar" alt="search here" placeholder="Search Here">
+                </div>
+                
+                <div class="searchBtns">
+                    <button class="requestBtn">
+                        <h4>Request For Help</h4>
+                        <p>Find a Hero/Post a Request</p>
+                    </button>
+
+                    <button class="unleashBtn">
+                        <h4>Unleash Your Power</h4>
+                        <p>List Your Services Now</p>
+                    </button>
+
+                    <button class="beHeroBtn">
+                        <h4>Be A Hero</h4>
+                        <p>Find a Request/Post a Service</p>
+                    </button>
+                </div>
+            </div>
+
+            
+                <div class="searchBarForMobile">
+                    <label style="visibility: hidden;" for="searchBar2">Search Bar</label>
+                    <input type="text" id="searchBar2" name="searchBar" alt="search here" placeholder="Search Here">
+                    <button class="requestBtn">
+                        <h4>Request For Help</h4>
+                        <p>Find a Hero/Post a Request</p>
+                    </button>
+                </div>
+
+                <div class="divForUnleashBtn">
+                    <button class="unleashBtn">
+                        <h4>Unleash Your Power</h4>
+                        <p>List Your Services Now</p>
+                    </button>
+                </div>
+
+                <div class="divForBHeroBtn">
+                    <button class="beHeroBtn">
+                        <h4>Be A Hero</h4>
+                        <p>Find a Request/Post a Service</p>
+                </button>
+                </div>
+
+            <div class="category" id="cate">
+                <h3>Services by Category</h3>
+                <div class="cate_list">
+                    <figure>
+                        <a href="#cate">
+                            <img src="./images/category/food.png" alt="category for cook">
+                        </a>
+                        <figcaption>Cook</figcaption>
+                    </figure>  
+                    <figure>
+                        <a href="#cate">
+                            <img src="./images/category/craft.png" alt="category for craft">
+                        </a>
+                        <figcaption>Craft</figcaption>
+                    </figure>  
+                    <figure>
+                        <a href="#cate">
+                            <img src="./images/category/teach.png" alt="category for teach">
+                        </a>
+                        <figcaption>Teach</figcaption>
+                    </figure> 
+                    <figure>
+                        <a href="#cate">
+                            <img src="./images/category/fix.png" alt="category for fix">
+                        </a>
+                        <figcaption>Fix</figcaption>
+                    </figure> 
+                    <figure>
+                        <a href="#cate">
+                            <img src="./images/category/home.png" alt="category for home">
+                        </a>
+                        <figcaption>Home</figcaption>
+                    </figure> 
+                    <figure>
+                        <a href="#cate">
+                            <img src="./images/category/music.png" alt="category for music">
+                        </a>
+                        <figcaption>Music</figcaption>
+                    </figure> 
+                    <figure>
+                        <a href="#cate">
+                            <img src="./images/category/buying.png" alt="category for buying">
+                        </a>
+                        <figcaption>Buying</figcaption>
+                    </figure> 
+                    <figure>
+                        <a href="#cate">
+                            <img src="./images/category/moreBtn.png" alt="category for More">
+                        </a>
+                    </figure>
+                </div>
+                <button class="mainButton">More</button>
+            </div>
+
+            <div class="footer">
+                <ul class="nav">
+                    <li><a href="#"><img src="./images/nav/tramsaction.png" class="navItem1" alt="transaction icon"></a></li>
+                    <li><a href="#"><img src="./images/nav/notification.png" class="navItem2" alt="notification icon"></a></li>
+                    <li><a href="#"><img src="./images/nav/messages.png" class="navItem3" alt="messages icon"></a></li>
+                    <li><a href="#"><img src="./images/nav/profile.png" class="navItem4" alt="profile icon"></a></li>
+                </ul>
+                <img src="./images/logo.png" class="logo" alt="logo">
+                <p>About Us</p>
+                <p>Contact Us</p>
+                
+            </div>
+        </div>
+
+    </body>
+</html>
