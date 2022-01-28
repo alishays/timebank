@@ -38,4 +38,5 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   
 
-se.
+Note:
+The reason I chose to use this license which is BSD License is that I hope that anyone who would like to use my code or design can cite where it is. Therefore, my design and my source code will not be theft. Also, other people cannot use my name to promote the products derived from this website. Therefore, I use BSD License to be the website's license.
